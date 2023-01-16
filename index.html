@@ -16,16 +16,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="camaras.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+ 
     <title>Cámaras ONI</title>
 </head>
 
 <body>
+
+  <audio id="miAudio" autoplay>
+    <source src="audio/nate.ogg" type="audio/ogg">
+    <source src="audio/nate.mp3" type="audio/mpeg">
+    Tu navegador no admite el elemento audio.
+  </audio>
+
+
     <!--barra de navegación-->
     <nav id='menu'>
         <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
         <ul>
-          <li><a href='http://'><img src="images/logooni.jpg" alt="" class="logonav"></a></li>
+          <li>
+            
+            <picture>
+            <!-- Imagen para pantallas con una resolución entre 800px y 1200px -->
+            <source media="(min-width: 800px) and (max-width: 1200px)" sizes="(max-width: 800px), 800px" srcs
+            et="images/logooni-800.jpg">
+            <!-- Imagen para pantallas con una resolución mayor de 1200px -->
+            <source media="(min-width: 1200px)" sizes="(max-width: 1200px), 1200px" srcset="images/logooni-1200.jpg">
+            <!-- Imagen por defecto para pantallas con cualquier otra resolución -->
+            <img src="images/logooni.jpg" alt="Logo Oni" class="logonav">
+
+          </picture>
+        
+        </li>
+
+
           <li><a class='dropdown-arrow' href='#'>Products</a>
             <ul class='sub-menus'>
               <li><a href='http://'>CÁMARAS</a></li>
@@ -36,6 +59,10 @@
           </li>
           <li style="float: right;"><a href='http://'><img src="images/carrito.png" alt="" class=""></a></li>
           <li style="float: right;"><a href='http://'><img src="images/idioma.png" alt="" class=""></a></li>
+          <li style="float: right;"><button onclick="document.getElementById('miAudio').play()"><i class="fa fa-play"></i></button></li>
+          <li style="float: right;"> <button onclick="document.getElementById('miAudio').pause()"><i class="fa fa-pause"></i></button></li>
+         
+          
           
         </ul>
       </nav>
@@ -78,7 +105,7 @@
     </div>
   
    <div class="cajapubliiz">
-    <button> <img src="images/publi1.png" class="producto img-fluid w-100 h-80"alt="...">
+    <button id="miDiv"> <img src="images/publi1.png" class="producto img-fluid w-100 h-80"alt="...">
     </button>
 </div>
 
@@ -225,6 +252,19 @@
 
 
 <br>
+<div class="divvideos">
+  
+ 
+  <video style="text-align: center; margin-left: 300px;" width="1280" height="720" controls preload="none" loop>
+    <source src="video.ogv" type="video/ogg">
+    <source src="videos/video1.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de vídeo.
+</video>
+    
+</div>
+<iframe style="text-align: center; margin-left: 300px;" width="1280" height="720" src="https://www.youtube.com/embed/E5oYlGhsjYQ?autoplay=1"
+ title="¡COMPRO UNA CÁMARA POR 1€!" frameborder="0" 
+allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
   <footer>
     <div class="footer-container">
