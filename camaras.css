@@ -118,6 +118,7 @@
 
 
 .cajasmenuopciones button {
+  transform: color 5.5s, font-size 0.5s, transform 2s;
   grid-column: 1;
   display: block;
   width: 100%;
@@ -130,8 +131,13 @@
   text-decoration: none;
   background:  #f1f1f1;
   color: #000;
+  
 }
- 
+button:hover {
+  color: rgb(40, 37, 37);
+  font-size: 2rem;
+  transform: scale(1.1);
+}
 .cajasmenuopciones button:nth-of-type(even) {
   background: #f1f1f1;
 }
@@ -158,7 +164,7 @@
   
   }
 .cajasmenuopcionesiz button {
-  
+  transition: color 5.5s, font-size 0.5s, transform 2s;
   display: block;
   width: 100%;
   padding: 20px;
@@ -172,7 +178,11 @@
   background: rgb(245, 244, 241);
   color: #000;
 }
- 
+button:hover {
+  color: rgb(40, 37, 37);
+  font-size: 2rem;
+  transform: scale(1.1);
+}
  
 
 @media only screen and (max-width: 880px) {
@@ -218,7 +228,7 @@ flex-grow: 1;
   height: 250px;
   border: 0;
 }
- .contenidoventas1{
+.contenidoventas1 {
   width: 100%;
   height: 80px;
   text-align: center;
@@ -230,7 +240,13 @@ flex-grow: 1;
   margin-right: 200px;
   margin-top: 60px;
   background-color: transparent;
- }
+  transition: transform 0.5s;
+}
+
+.contenidoventas1:hover {
+  transform: scale(1.1) translate(5px, 5px);
+  background-color: lightgray;
+}
 .contenidoventas2{
   width: 100%;
   height: 100%;
@@ -242,8 +258,39 @@ flex-grow: 1;
   background-color: transparent;
   
  }
+ .contenidoventas2:hover {
+  transform: scale(1.1) translate(5px, 5px);
+  background-color: lightgray;
+}
+
+ @keyframes cambiarColor {
+   0% {
+     background-color: red;
+   }
+   25% {
+     background-color: orange;
+   }
+   50% {
+     background-color: yellow;
+   }
+   75% {
+     background-color: green;
+   }
+   100% {
+     background-color: blue;
+   }
+ }
 
 
+
+
+ #miDiv {
+  animation-name: cambiarColor;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
  
 
  .contenidoventas1 button{
